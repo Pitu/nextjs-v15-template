@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+	--color-background: hsl(240, 8%, 9%);
+	--color-card: hsl(240, 8%, 10%);
+
+	--color-base: hsl(240, 9%, 59%);
+	--color-highlight: hsl(240, 9%, 86%);
+
+	--color-border: hsl(240, 8%, 13%);
+}
+
+.card {
+	@apply bg-card border-1 border-border shadow-[0_3px_0_0_hsl(240,8%,8.5%)] rounded-[5px];
+}
