@@ -1,6 +1,45 @@
 {
 	"editor.defaultFormatter": "biomejs.biome",
 	"editor.codeActionsOnSave": {
-		"quickfix.biome": "explicit"
+		"quickfix.biome": "explicit",
+		"source.organizeImports": "explicit",
+		"source.fixAll.biome": "explicit"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"files.insertFinalNewline": true,
+	"files.eol": "\n",
+	"search.exclude": {
+		"**/.yarn": true,
+		"**/.next": true,
+		"**/dist": true,
+		"**/node_modules": true
+	},
+	"files.watcherExclude": {
+		"**/.next/*/**": true,
+		"**/.yarn/*/**": true,
+		"**/dist/*/**": true,
+		"**/node_modules/*/**": true
+	},
+	"tailwindCSS.experimental.classRegex": [
+		["cva\\(((?:[^()]|\\([^()]*\\))*)\\)", "[\"'`]?([^\"'`]+)[\"'`]?"],
+		["cx\\(((?:[^()]|\\([^()]*\\))*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+		[
+			"tv\\((([^()]*|\\([^()]*\\))*)\\)",
+			"([\"'`][^\"'`]*.*?[\"'`])",
+			"[\"'`]([^\"'`]*).*?[\"'`]"
+		]
+	],
+	"workbench.editor.customLabels.patterns": {
+		"**/app/**/page.tsx": "${dirname} (${filename}.${extname}) - Page",
+		"**/app/**/layout.tsx": "${dirname} (${filename}.${extname}) - Layout",
+		"**/app/**/template.tsx": "${dirname} (${filename}.${extname}) - Template",
+		"**/app/**/error.tsx": "${dirname} (${filename}.${extname}) - Error",
+		"**/app/**/not-found.tsx": "${dirname} (${filename}.${extname}) - Not Found",
+		"**/components/**/page.tsx": "${dirname} (${filename}.${extname}) - Component"
 	}
 }
